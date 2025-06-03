@@ -1,0 +1,3 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción y Conceptos Fundamentales}{3}{0}{1}
+\beamer@sectionintoc {2}{Recursos Adicionales}{5}{0}{2}

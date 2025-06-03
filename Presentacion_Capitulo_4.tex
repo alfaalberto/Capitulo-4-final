@@ -1,0 +1,110 @@
+\documentclass{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\usefonttheme{professionalfonts}
+\useinnertheme{rounded}
+
+% --- PREÁMBULO ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc, arrows.meta, shapes, arrows, shapes.geometric, fit}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{tcolorbox}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{caption} % Para poder usar captions dentro de figure
+\usepackage{media9}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\newcommand{\figplaceholder}[2][0.6\textwidth]{%
+    \begin{tikzpicture}
+        \node[draw, dashed,
+              minimum width=#1,
+              text width=0.9*#1,
+              minimum height=0.5*#1,
+              align=center,
+              text=gray,
+              inner sep=3pt
+              ] {#2};
+    \end{tikzpicture}%
+}
+
+% --- METADATOS DE LA PRESENTACIÓN ---
+\title{Transformaciones de Intensidad y Filtrado Espacial}
+\subtitle{Basado en el Cap. 3 de ``Digital Image Processing'' \\ (Gonzalez \& Woods)}
+\author{Nombre del Presentador  \small{(Adaptado de material técnico)}}
+\institute{Universidad / Institución}
+\date{\today}
+
+\begin{document}
+
+% --- DIAPOSITIVA DE TÍTULO ---
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% --- DIAPOSITIVA DE CONTENIDO (TABLA DE MATERIAS) ---
+\begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents
+\end{frame}
+
+% --- SECCIÓN 1 ---
+\section{Introducción y Conceptos Fundamentales}
+
+\begin{frame}[fragile]{Antecedentes}
+
+\href{run:Antecedentes.html}{4 Antecedentes}
+
+\end{frame}
+
+
+
+\begin{frame}{Preview del Capítulo}
+    \begin{block}{Dominio Espacial}
+        El término \textit{dominio espacial} se refiere al plano mismo de la imagen, y los métodos de procesamiento en esta categoría se basan en la manipulación directa de los píxeles en una imagen.
+    \end{block}
+    \begin{itemize}
+        \item Se contrasta con el procesamiento en el \textit{dominio de la frecuencia} (o transformado), donde la imagen primero se transforma, luego se procesa, y finalmente se aplica la transformada inversa.
+        \item Dos categorías principales de procesamiento en el dominio espacial:
+        \begin{itemize}
+            \item \textbf{Transformaciones de intensidad}: Operan en píxeles individuales. Útiles para manipulación de contraste y segmentación por umbralización.
+            \item \textbf{Filtrado espacial}: Realiza operaciones sobre la vecindad de cada píxel. Útil para suavizado y realce de bordes.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+
+%=================================================================
+% Sección 9: Últimos Recursos y Enlaces
+%=================================================================
+\section{Recursos Adicionales}
+
+\begin{frame}[fragile]{Enlaces a Contenido Complementario}
+    \begin{itemize}
+        \item \href{run:Tema_pag_150_p1.html}{\textbf{3.4 Fundamentos del Filtrado Espacial}}
+        \item \href{run:Tema_3_4_pag_154_p1.html}{\textbf{Correlación Espacial y Convolución}}
+        \item \href{run:Tema_3_4_pag_161_p1.html}{\textbf{Núcleos Separables de Filtros}}
+        \item \href{run:Tema_3_4_pag_166_p1.html}{\textbf{Lowpass Gaussian Filter Kernels}}
+        \item \href{run:Tema_3_4_pag_169_p1.html}{\textbf{Ejemplos: Lowpass Gaussian Filter Kernels}}
+        \item \href{run:Tema_3_4_pag_174_p1.html}{\textbf{Filtros de Estadística de Orden}}
+        \item \href{run:Tema_3_6_p1.html}{\textbf{Filtros Espaciales de Realce (Pasa Altas)}}
+        \item \href{run:Tema_3_6_pag_182.html}{\textbf{Enmascaramiento Desenfocado y High-Boost}}
+        \item \href{run:Tema_3_6_pag_184.html}{\textbf{Derivadas de Primer Orden: El Gradiente}}
+        \item \href{run:Tema_3_7_pag_188.html}{\textbf{Filtros de Señal: Highpass, Bandreject y Bandpass}}
+        \item \href{run:Tema_3_8_pag_191.html}{\textbf{Métodos de Mejora Espacial en Procesamiento de Imágenes}}
+    \end{itemize}
+\end{frame}
+
+\end{document}
